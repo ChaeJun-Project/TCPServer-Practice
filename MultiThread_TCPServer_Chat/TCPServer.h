@@ -40,6 +40,9 @@ public:
 
 	//서버에서 클라이언트로 데이터 통신, Accept함수에서 스레드로 병렬처리
 	void CommunicateData(const std::string& client_id);
+
+	//접속을 해제한 클라이언트의 주소와 포트번호를 출력
+	void PrintIPAndPort(const SOCKADDR_IN client_addr);
 	//==================================================================
 
 	//서버 구동

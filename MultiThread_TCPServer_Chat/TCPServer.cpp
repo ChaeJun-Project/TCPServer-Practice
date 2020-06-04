@@ -220,11 +220,16 @@ void TCPServer::SendDisAccept(const std::string & client_id)
 	//ServerLog.txt 파일에 접속 종료한 ID를 등록
 	WriteFile(packet_disaccept->GetLogStr());
 
+	
+
 	delete packet;
 }
 
 void TCPServer::WriteFile(const std::string& log)
 {
+    //log내용 출력
+	std::cout << log << std::endl;
+
 	std::ofstream write_file;
 	//std::fstream::app은 기존의 파일에 내용을 더 추가해서 작성하는 옵션임
 	write_file.open(server_log, std::fstream::app);
@@ -275,7 +280,8 @@ void TCPServer::CommunicateData(const std::string& client_id)
 {
 	// 클라이언트 정보 얻기
 	SOCKET client_sock = GetClientInfo(client_id)->client_sock;
-
+	SOCKADDR_IN client_addr = GetClientInfo(client_id)->client_addr;
+	
 	//buf의 내용을 다 지움
 	ZeroMemory(buf, sizeof(buf));
 
@@ -297,6 +303,8 @@ void TCPServer::CommunicateData(const std::string& client_id)
 	    //클라이언트가 정상적으로 접속을 종료했을 경우
 		if (Utility::GetPacketTypeFromData(buf) == static_cast<int>(PT_CLIENT_DISCONNECT))
 		{
+			//접속을 해제한 클라이언트의 주소와 포트번호를 출력
+			PrintIPAndPort(client_addr);
 		    std::cout<< Utility::GetWithoutPacketTypeFromData(buf) <<std::endl;
 		    break;
 		}
@@ -313,6 +321,8 @@ void TCPServer::CommunicateData(const std::string& client_id)
 	//강제로 연결 종료
 	if (retval == SOCKET_ERROR)
 	{
+		//접속을 해제한 클라이언트의 주소와 포트번호를 출력
+		PrintIPAndPort(client_addr);
 		std::cout << client_id <<", disconnection request success" << std::endl;
 	}
 
@@ -330,6 +340,11 @@ void TCPServer::CommunicateData(const std::string& client_id)
 	closesocket(client_sock);
 	//끝
 	mutex.unlock();
+}
+
+void TCPServer::PrintIPAndPort(const SOCKADDR_IN client_addr)
+{
+	std::cout << "[TCP 서버] 클라이언트 종료 IP 주소: " << inet_ntoa(client_addr.sin_addr) << ", " << "포트 번호: " << ntohs(client_addr.sin_port) << std::endl;
 }
 
 void TCPServer::Run()
