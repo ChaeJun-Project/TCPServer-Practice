@@ -1,6 +1,6 @@
 ﻿#include "stdafx.h"
-#include "TCPServer.h"
-#include "TCPClient.h"
+#include "./Network/TCPServer.h"
+#include "./Network/TCPClient.h"
 
 int main(int argc, char *argv[])
 {

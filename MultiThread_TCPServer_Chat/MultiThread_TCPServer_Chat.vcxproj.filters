@@ -30,72 +30,75 @@
     <Filter Include="Thread">
       <UniqueIdentifier>{34203522-2019-4a72-bcc2-e8e84e8fa320}</UniqueIdentifier>
     </Filter>
+    <Filter Include="d">
+      <UniqueIdentifier>{f2f16591-14ab-4056-9d25-8cb950834c12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Convert\Convert.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorCheck\ErrorCheck.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\TCPClient.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\TCPServer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Session\Session.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\Thread.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool\ThreadPool.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Utility.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
     <ClCompile Include="MultiThread_TCPServer_Chat.cpp">
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="TCPClient.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="TCPServer.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="Session.cpp">
-      <Filter>Session</Filter>
-    </ClCompile>
-    <ClCompile Include="ErrorCheck.cpp">
-      <Filter>ErrorCheck</Filter>
-    </ClCompile>
-    <ClCompile Include="Convert.cpp">
-      <Filter>Convert</Filter>
-    </ClCompile>
-    <ClCompile Include="ThreadPool.cpp">
-      <Filter>ThreadPool</Filter>
-    </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>Utility</Filter>
-    </ClCompile>
-    <ClCompile Include="Thread.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TCPServer.h">
+    <ClInclude Include="Convert\Convert.h">
       <Filter>Network</Filter>
     </ClInclude>
-    <ClInclude Include="TCPClient.h">
+    <ClInclude Include="ErrorCheck\ErrorCheck.h">
       <Filter>Network</Filter>
     </ClInclude>
-    <ClInclude Include="TCPSuper.h">
+    <ClInclude Include="Network\TCPClient.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\TCPServer.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\TCPSuper.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Session\Session.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\Thread.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool\ThreadPool.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Utility.h">
       <Filter>Network</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="Packet.h">
-      <Filter>Packet</Filter>
-    </ClInclude>
-    <ClInclude Include="Session.h">
-      <Filter>Session</Filter>
-    </ClInclude>
-    <ClInclude Include="ErrorCheck.h">
-      <Filter>ErrorCheck</Filter>
-    </ClInclude>
-    <ClInclude Include="Convert.h">
-      <Filter>Convert</Filter>
-    </ClInclude>
-    <ClInclude Include="ThreadPool.h">
-      <Filter>ThreadPool</Filter>
-    </ClInclude>
-    <ClInclude Include="Utility.h">
-      <Filter>Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Thread.h">
-      <Filter>Thread</Filter>
+      <Filter>Network</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

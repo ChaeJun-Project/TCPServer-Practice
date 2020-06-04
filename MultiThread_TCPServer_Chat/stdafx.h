@@ -19,20 +19,20 @@
 #include <string>
 
 //Error
-#include "ErrorCheck.h"
+#include "./ErrorCheck/ErrorCheck.h"
 
 //Utility
-#include "Utility.h"
+#include "./Utility/Utility.h"
 
 //Convert
-#include "Convert.h"
+#include "./Convert/Convert.h"
 
 //스레드 풀
-#include "ThreadPool.h"
+#include "./ThreadPool/ThreadPool.h"
 
 //패킷
-#include "Packet.h"
+#include "./Packet/Packet.h"
 
 //통신
-#include "Session.h"
+#include "./Session/Session.h"
 
