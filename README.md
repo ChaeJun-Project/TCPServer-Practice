@@ -30,6 +30,8 @@
 
 ● chaw109@naver.com
 
+![image](https://user-images.githubusercontent.com/39609369/163959100-56948941-4137-41a7-a331-d2f5ddfeb3a3.png)
+
 
 # [시연 동영상 URL]
 ● https://www.youtube.com/watch?v=PQFlj2xyB0o
